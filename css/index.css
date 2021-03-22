@@ -18,12 +18,30 @@ header .icn_close::after { content: ''; position: absolute; left: 0; top: calc(5
 header .icn_close::before { transform: rotate3d(0, 0, 1, 45deg);}
 header .icn_close::after { transform: rotate3d(0, 0, 1, -45deg);}
 
-.icn_login { display: inline-block; width: 1.375rem; height: 1.375rem; background:  url("../img/set_login.png") no-repeat; }
+.icn_login { display: inline-block; width: 1.375rem; height: 1.375rem; background:  url("../img/set_login.png") no-repeat top left / 6.25rem 15.625rem; }
 .icn_google { background-position: 0 -3.125rem; }
 .icn_facebook { background-position: 0 -6.25rem; }
 .icn_naver { background-position: 0 -9.375rem; }
 .icn_apple { background-position: 0 -12.5rem; }
 
+.icn_mobile { display: inline-block; width: 5.125rem; height: 5.125rem; background: url("../img/icn_main_characters_spr.png") no-repeat top left / 45.375rem 33.875rem; filter: grayscale(.8); transition: filter .25s; }
+.mo_game_1 { background-position: 0 -17.25rem; }
+.mo_game_2 { background-position: -5.75rem -17.25rem;}
+.mo_game_3 { background-position: -11.5rem -17.25rem; }
+.mo_game_4 { background-position: -17.25rem -17.25rem; }
+.mo_game_5 { background-position: -23rem -17.25rem; }
+.mo_game_6 { background-position: -28.75rem -17.25rem; }
+.mo_game_7 { background-position: -34.5rem -17.25rem; }
+
+.icn_os { display: inline-block; width: 1.125rem; height: 1.125rem; background: url("../img/set_device.png") no-repeat top left / 3.125rem 9.375rem; }
+.icn_desktop { background-position: 0 0; }
+.icn_appstore { background-position: 0 -3.125rem; }
+.icn_playstore { background-position: 0 -6.25rem; }
+
+.icn_sns { display: inline-block; width: 1.25rem; height: 1rem; background: #fff url("../img/set_footer.png") no-repeat top left / 6.25rem 18.75rem; transition: background-color .25s; }
+.icn_s_youtube { background-position: 0 -3.125rem; }
+.icn_s_twitter { background-position: 0 -6.25rem; }
+.icn_s_facebook { background-position: 0 -9.375rem; }
 
 /* header */
 header { position: relative; width: 100%; height: 3.75rem; }
@@ -93,7 +111,7 @@ header.open .gnb_dimmed { z-index: 99; background: rgba(0, 0, 0, 0.5); }
 .info_wrap .info_contents { display: flex; justify-content: space-between; }
 .info_wrap .recommend { display: flex; justify-content: space-between; width: 53.125rem; }
 .info_wrap .rec_item { position: relative; width: 19%; box-shadow: 0 0 10px rgba(0, 0, 0, .1); transition: transform .5s, backdrop-filter 2s; }
-.info_wrap .rec_item:last-child { margin-right: 0;}
+.info_wrap .rec_item:last-child { margin-right: 1%;}
 .info_wrap .recommend_img { position: relative; display: block; width: 100%; height: 10rem; overflow: hidden; transition: height .25s, margin .25s, padding .25s;}
 .info_wrap .recommend_img img { width: 100%; transform-origin: bottom; transition: transform .25s;}
 .info_wrap .recommend_mark,
@@ -119,7 +137,7 @@ header.open .gnb_dimmed { z-index: 99; background: rgba(0, 0, 0, 0.5); }
 .info_wrap .login_other p { color: #737373; font-size: .75rem; }
 .info_wrap .login_other ul { display: flex; justify-content: center; align-items: center; }
 .info_wrap .login_other ul li { margin-left: .5rem;}
-.info_wrap .login_other ul li a { display: flex; justify-content: center; align-items: center; width: 1.375rem; height: 1.375rem; opacity: .5; -webkit-filter: grayscale(1); filter: grayscale(1); transition: filter .25s, opacity .25s; }
+.info_wrap .login_other ul li a { display: flex; justify-content: center; align-items: center; width: 1.375rem; height: 1.375rem; opacity: .5; -webkit-filter: grayscale(.3); filter: grayscale(.3); transition: filter .25s, opacity .25s; }
 
 .info_wrap .login_support { display: flex; justify-content: space-between; }
 .info_wrap .login_support a { font-size: .75rem; color: #737373; }
@@ -140,7 +158,7 @@ header.open .gnb_dimmed { z-index: 99; background: rgba(0, 0, 0, 0.5); }
 .type_list .view_type .btn.btn_list .btn_elem { background: #fff; }
 
 /* type - thumbnail ICON */
-.thumbnail_dot { position: absolute; display:inline-block; width: 6px; height: 6px; background: #c3c3c3; transition: background-color .25s ease; }
+.thumbnail_dot { position: absolute; display: inline-block; width: 6px; height: 6px; background: #c3c3c3; transition: background-color .25s ease; }
 .thumbnail_dot:nth-child(1) { top: 6px; left: 6px; }
 .thumbnail_dot:nth-child(2) { top: 6px; right: 6px; }
 .thumbnail_dot:nth-child(3) { bottom: 6px; right: 6px; }
@@ -153,7 +171,7 @@ header.open .gnb_dimmed { z-index: 99; background: rgba(0, 0, 0, 0.5); }
 .list_bar:nth-child(3) { top: 75%; }
 
 /* search box */
-.search_box { position: relative; }
+.search_box { position: absolute; top: 0; right: 0; transform: translate3d(0, -50%, 0); }
 .search_box input { padding: .75rem .5rem; width: 15rem; font-size: .875rem; color: #737373; border: none; border-bottom: 1px solid #737373; transition: color .25s ease, border .25s ease; }
 .search_box input::placeholder { color: #737373; transition: color .25s ease; }
 .search_box input:active, .search_box input:active::placeholder,
@@ -173,11 +191,65 @@ header.open .gnb_dimmed { z-index: 99; background: rgba(0, 0, 0, 0.5); }
 .search_box .btn_search:hover::before { border-color: #07f; }
 .search_box .btn_search:hover::after { background: #07f; }
 
-.filter_list { display: flex; justify-content: flex-start; align-items: center; width: 100%; padding: 1rem 2rem; box-shadow: 0 0 10px rgba(0, 0, 0, .1); }
+/* filter */
+.filter_list { display: flex; justify-content: flex-start; align-items: center; width: 100%; margin-bottom: 2rem; padding: 1rem 2rem; box-shadow: 0 0 10px rgba(0, 0, 0, .1); }
 .filter_item { margin-right: 1.5rem; }
-.filter_item button { padding: .5rem 2rem; color: #737373; transition: color .25s ease; }
+.filter_item button { padding: .5rem 2rem; color: #737373; transition: color .25s, background-color .25s; }
 .filter_item:hover button { color: #07f; }
 .filter_item.on button { background: #000; color: #fff; }
+
+/* all game */
+.pc_game_wrap,
+.mobile_game_wrap { width: 100%; margin-bottom: 3rem; }
+
+.device_type { display: flex; align-items: center; margin-bottom: 1rem; }
+.device_type h3 { font-size: 1.3rem; margin-right: 1rem; }
+.device_type button { font-size: 1.3rem; color: #737373; }
+
+/* pc game */
+.pc_list { display: flex; flex-wrap: wrap; align-items: flex-start; width: 104%; margin-left: -2%; }
+.pc_item { display: none; width: 21%; margin: 0 2% 4%; box-shadow: 0 0 10px rgba(0, 0, 0, .15); }
+.pc_item.on { display: block; }
+.pc_thumbnail { overflow: hidden; }
+.pc_thumbnail img { width: 100%; transform: scale3d(1.1, 1.1, 1); transition: transform .4s ease; }
+.pc_contents { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; width: 100%; padding: 1rem 1.5rem; }
+.pc_title { font-size: 1.2rem; margin-bottom: 1rem; word-break: break-all; line-height: 1.4;}
+.event .pc_title::after { content: 'event'; display: inline-block; font-size: .75rem; margin-left: .4rem; color: #07f; }
+.pc_subtitle { margin-bottom: 2rem; }
+.pc_filter { display: flex; justify-content: flex-start; align-items: center; padding-top: 1rem; width: 100%; color: #737373; border-top: 1px solid #e3e3e3; font-size: .75rem; }
+.filter_txt { margin-left: .25rem;}
+
+/* mobile game */
+.mobile_list { display: flex; flex-wrap: wrap; align-items: flex-start; width: 104%; margin-left: -2%; }
+.mobile_item {  width: 21%; margin: 0 2% 4%; box-shadow: 0 0 10px rgba(0, 0, 0, .15); }
+.mobile_item .item_wrap { display: flex; justify-content: flex-start; padding: 1rem; width: 100%; }
+.mobile_thumbnail { margin-right: .5rem; width: 5.125rem; border-radius: 25px; overflow: hidden; }
+.mobile_contents { position: relative; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; width: calc(100% - 5.625rem); word-break: break-all; }
+.mobile_title { margin-bottom: .75rem; font-size: 1rem; }
+.event .mobile_title::after { content: 'event'; display: inline-block; font-size: .75rem; margin-left: .4rem; color: #07f; }
+.mobile_filter { font-size: .75rem; }
+.mobile_os { position: absolute; left: 0; bottom: 0; }
+
+/* footer */
+footer { padding-bottom: 2rem; background: #222426; }
+.footer_top { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; width: 100%; border-bottom: 1px solid rgba(255, 255, 255, .1); }
+.footer_top a { font-size: .875rem; color: #fff; }
+.footer_sns a { margin-left: .25rem; padding: .25rem;}
+
+.footer_middle { padding: 1.5rem 2rem; }
+.footer_nav { display: flex; }
+.footer_nav:last-child { margin-top: .75rem; }
+.footer_nav li a { position: relative; padding: .25rem .75rem; color: #a3a3a3; font-size: .8rem; transition: color .25s; }
+.footer_nav li a::after { content: ''; position: absolute; top: calc(50% - .2rem); right: 0; width: 1px; height: .5rem; background: #a3a3a3;  }
+.footer_nav li:first-child a { padding-left: 0; }
+.footer_nav li:last-child a::after { display: none; }
+
+.footer_bottom { padding: 0 2rem 2rem; }
+.footer_bottom address { font-size: .75rem; color: #737373; line-height: 1.5;}
+.footer_bottom address a { color: #737373; border-bottom: 1px solid #737373; }
+
+.footer_logo { display: block; margin-left: 2rem; width: 10rem; height: 1rem; }
+.footer_logo img { width: 100%; } 
 
 /* hover */
 @media (min-width: 1025px) {
@@ -202,11 +274,20 @@ header.open .gnb_dimmed { z-index: 99; background: rgba(0, 0, 0, 0.5); }
     .info_wrap .rec_item a:hover .recommend_img img { transform: scale3d(1.25, 1.25, 1); }
 
     .info_wrap .login_other li a:hover { opacity: 1; -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, .3)) grayscale(0); filter: drop-shadow(0 0 5px rgba(0, 0, 0, .3)) grayscale(0); }
+    
     /* game_wrap */
     .view_type .btn:hover { border: 1px solid #07f; }
     .view_type .btn:hover .btn_elem { background: #07f; }
 
+    .pc_thumbnail:hover img { transform: scale3d(1, 1, 1);}
+    .mobile_item:hover .icn_mobile { filter: grayscale(0); }
+
+    /* footer */
+    .footer_sns a:hover .icn_sns { background-color: #07f; }
+    .footer_nav li a:hover { color: #07f; }
 }
+
+@media (max-width: 1280px) { html { font-size: 14px; }}
 
 /* animation */
 @keyframes gameTabSlide { 
