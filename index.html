@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>clone-nex</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR" rel="stylesheet">
     
@@ -100,14 +100,17 @@
             </div>
             <ul class='owl-dots'> 
                 <li class='owl-dot'>
-                    <button type="button" class="slider_button">CRIMSON DESERT</button>
+                    <button type="button" class="slider_button"><span class="blind">CRIMSON DESERT</span></button>
                 </li> 
                 <li class='owl-dot'>
-                    <button type="button" class="slider_button">BLACK DESERT 5th</button>
+                    <button type="button" class="slider_button"><span class="blind">BLACK DESERT 5th</span></button>
                 </li> 
                 <li class='owl-dot'>
-                    <button type="button" class="slider_button">PEARL ABYSS</button>
-                </li> 
+                    <button type="button" class="slider_button"><span class="blind">PEARL ABYSS</span></button>
+                </li>
+                <li class="owl-dot fake-dot fake-first">
+                    <button type="button" class="slider_button"></button>
+                </li>
             </ul>
         </section>
         <section class="info_wrap">
@@ -213,19 +216,19 @@
             </div>
             <ul class="filter_list">
                 <li class="filter_item on">
-                    <button type="button">#ALL GAME</button>
+                    <button type="button" class="js_btn_allgame">#ALL GAME</button>
                 </li>
                 <li class="filter_item">
-                    <button type="button">#MMORPG</button>
+                    <button type="button" class="js_btn_mmorpg">#MMORPG</button>
                 </li>
                 <li class="filter_item">
-                    <button type="button">#ACTION</button>
+                    <button type="button" class="js_btn_action">#ACTION</button>
                 </li>
                 <li class="filter_item">
-                    <button type="button">#FPS</button>
+                    <button type="button" class="js_btn_fps">#FPS</button>
                 </li>
                 <li class="filter_item">
-                    <button type="button">#CASUAL</button>
+                    <button type="button" class="js_btn_casual">#CASUAL</button>
                 </li>
             </ul>
             <section class="pc_game_wrap">
@@ -234,7 +237,7 @@
                     <button type="button" class="bold">MOBILE게임</button>
                 </div>
                 <ul class="pc_list">
-                    <li class="pc_item filter_mmorpg on event">
+                    <li class="pc_item filter_all filter_mmorpg on event">
                         <a href="#">
                             <div class="pc_thumbnail">
                                 <img src="./img/thumbnail_1.jpg" alt="game1">
@@ -249,7 +252,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="pc_item filter_action on">
+                    <li class="pc_item filter_all filter_action on">
                         <a href="#">
                             <div class="pc_thumbnail filter_action">
                                 <img src="./img/thumbnail_2.jpg" alt="game2">
@@ -264,7 +267,7 @@
                             </div>
                         </a>
                     </li>                    
-                    <li class="pc_item filter_fps on">
+                    <li class="pc_item filter_all filter_fps on">
                         <a href="#">
                             <div class="pc_thumbnail">
                                 <img src="./img/thumbnail_3.jpg" alt="game3">
@@ -279,13 +282,13 @@
                             </div>
                         </a>
                     </li>                    
-                    <li class="pc_item filter_casual on">
+                    <li class="pc_item filter_all filter_casual on">
                         <a href="#">
                             <div class="pc_thumbnail">
                                 <img src="./img/thumbnail_4.jpg" alt="game4">
                             </div>
                             <div class="pc_contents">
-                                <span class="pc_title bold">game4</span>
+                                <span class="pc_title bold">actiongame4</span>
                                 <span class="pc_subtitle">play this game</span>
                                 <span class="pc_filter">
                                     <i class="icn_os icn_desktop"></i>
@@ -294,7 +297,7 @@
                             </div>
                         </a>
                     </li>                    
-                    <li class="pc_item filter_mmorpg on event">
+                    <li class="pc_item filter_all filter_mmorpg on event">
                         <a href="#">
                             <div class="pc_thumbnail">
                                 <img src="./img/thumbnail_5.jpg" alt="game5">
@@ -309,7 +312,7 @@
                             </div>
                         </a>
                     </li>                    
-                    <li class="pc_item filter_mmorpg on">
+                    <li class="pc_item filter_all filter_mmorpg on">
                         <a href="#">
                             <div class="pc_thumbnail">
                                 <img src="./img/thumbnail_6.jpg" alt="game6">
@@ -324,7 +327,7 @@
                             </div>
                         </a>
                     </li>                    
-                    <li class="pc_item filter_casual on">
+                    <li class="pc_item filter_all filter_casual on">
                         <a href="#">
                             <div class="pc_thumbnail">
                                 <img src="./img/thumbnail_7.jpg" alt="game7">
@@ -339,7 +342,7 @@
                             </div>
                         </a>
                     </li>                    
-                    <li class="pc_item filter_casual on event">
+                    <li class="pc_item filter_all filter_casual on event">
                         <a href="#">
                             <div class="pc_thumbnail">
                                 <img src="./img/thumbnail_8.jpg" alt="game7">
@@ -354,13 +357,13 @@
                             </div>
                         </a>
                     </li>   
-                    <li class="pc_item filter_mmorpg on">
+                    <li class="pc_item filter_all filter_mmorpg on">
                         <a href="#">
                             <div class="pc_thumbnail">
                                 <img src="./img/thumbnail_1.jpg" alt="game1">
                             </div>
                             <div class="pc_contents">
-                                <span class="pc_title bold">game1</span>
+                                <span class="pc_title bold">mmogame1</span>
                                 <span class="pc_subtitle">play this game</span>
                                 <span class="pc_filter">
                                     <i class="icn_os icn_desktop"></i>
@@ -369,13 +372,13 @@
                             </div>
                         </a>
                     </li>
-                    <li class="pc_item filter_action on">
+                    <li class="pc_item filter_all filter_action on">
                         <a href="#">
                             <div class="pc_thumbnail filter_action">
                                 <img src="./img/thumbnail_2.jpg" alt="game2">
                             </div>
                             <div class="pc_contents">
-                                <span class="pc_title bold">game2</span>
+                                <span class="pc_title bold">actiongame2</span>
                                 <span class="pc_subtitle">play this game</span>
                                 <span class="pc_filter">
                                     <i class="icn_os icn_desktop"></i>
@@ -384,13 +387,13 @@
                             </div>
                         </a>
                     </li>                    
-                    <li class="pc_item filter_fps on event">
+                    <li class="pc_item filter_all filter_fps on event">
                         <a href="#">
                             <div class="pc_thumbnail">
                                 <img src="./img/thumbnail_3.jpg" alt="game3">
                             </div>
                             <div class="pc_contents">
-                                <span class="pc_title bold">game3asdfsdafsd</span>
+                                <span class="pc_title bold">fpsgame3asdfsdafsd</span>
                                 <span class="pc_subtitle">play this game</span>
                                 <span class="pc_filter">
                                     <i class="icn_os icn_desktop"></i>
@@ -399,13 +402,13 @@
                             </div>
                         </a>
                     </li>                    
-                    <li class="pc_item filter_casual on">
+                    <li class="pc_item filter_all filter_casual on">
                         <a href="#">
                             <div class="pc_thumbnail">
                                 <img src="./img/thumbnail_4.jpg" alt="game4">
                             </div>
                             <div class="pc_contents">
-                                <span class="pc_title bold">game4</span>
+                                <span class="pc_title bold">casualgame4</span>
                                 <span class="pc_subtitle">play this game</span>
                                 <span class="pc_filter">
                                     <i class="icn_os icn_desktop"></i>
@@ -414,13 +417,13 @@
                             </div>
                         </a>
                     </li>                    
-                    <li class="pc_item filter_mmorpg on">
+                    <li class="pc_item filter_all filter_mmorpg on">
                         <a href="#">
                             <div class="pc_thumbnail">
                                 <img src="./img/thumbnail_5.jpg" alt="game5">
                             </div>
                             <div class="pc_contents">
-                                <span class="pc_title bold">game5</span>
+                                <span class="pc_title bold">mmorpggame5</span>
                                 <span class="pc_subtitle">play this game</span>
                                 <span class="pc_filter">
                                     <i class="icn_os icn_desktop"></i>
@@ -429,13 +432,13 @@
                             </div>
                         </a>
                     </li>                    
-                    <li class="pc_item filter_mmorpg on event">
+                    <li class="pc_item filter_all filter_mmorpg on event">
                         <a href="#">
                             <div class="pc_thumbnail">
                                 <img src="./img/thumbnail_6.jpg" alt="game6">
                             </div>
                             <div class="pc_contents">
-                                <span class="pc_title bold">game6</span>
+                                <span class="pc_title bold">mmorpggame6</span>
                                 <span class="pc_subtitle">play this game</span>
                                 <span class="pc_filter">
                                     <i class="icn_os icn_desktop"></i>
@@ -444,13 +447,13 @@
                             </div>
                         </a>
                     </li>                    
-                    <li class="pc_item filter_casual on">
+                    <li class="pc_item filter_all filter_casual on">
                         <a href="#">
                             <div class="pc_thumbnail">
                                 <img src="./img/thumbnail_7.jpg" alt="game7">
                             </div>
                             <div class="pc_contents">
-                                <span class="pc_title bold">game7</span>
+                                <span class="pc_title bold">casualgame7</span>
                                 <span class="pc_subtitle">play this game</span>
                                 <span class="pc_filter">
                                     <i class="icn_os icn_desktop"></i>
@@ -459,13 +462,13 @@
                             </div>
                         </a>
                     </li>                    
-                    <li class="pc_item filter_casual on event">
+                    <li class="pc_item filter_all filter_casual on event">
                         <a href="#">
                             <div class="pc_thumbnail">
                                 <img src="./img/thumbnail_8.jpg" alt="game7">
                             </div>
                             <div class="pc_contents">
-                                <span class="pc_title bold">game8</span>
+                                <span class="pc_title bold">actiongame8</span>
                                 <span class="pc_subtitle">play this game</span>
                                 <span class="pc_filter">
                                     <i class="icn_os icn_desktop"></i>
@@ -482,7 +485,7 @@
                     <button type="button" class="bold">PC게임</button>
                 </div>
                 <ul class="mobile_list">
-                    <li class="mobile_item filter_mmorpg on event">
+                    <li class="mobile_item filter_all filter_mmorpg on event">
                         <a href="#" class="item_wrap">
                             <div class="mobile_thumbnail">
                                 <i class="icn_mobile mo_game_1"></i>
@@ -499,7 +502,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="mobile_item filter_action on">
+                    <li class="mobile_item filter_all filter_action on">
                         <a href="#" class="item_wrap">
                             <div class="mobile_thumbnail">
                                 <i class="icn_mobile mo_game_2"></i>
@@ -516,7 +519,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="mobile_item filter_mmorpg on event">
+                    <li class="mobile_item filter_all filter_mmorpg on event">
                         <a href="#" class="item_wrap">
                             <div class="mobile_thumbnail">
                                 <i class="icn_mobile mo_game_3"></i>
@@ -533,7 +536,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="mobile_item filter_action on">
+                    <li class="mobile_item filter_all filter_action on">
                         <a href="#" class="item_wrap">
                             <div class="mobile_thumbnail">
                                 <i class="icn_mobile mo_game_4"></i>
@@ -550,7 +553,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="mobile_item filter_casual on event">
+                    <li class="mobile_item filter_all filter_casual on event">
                         <a href="#" class="item_wrap">
                             <div class="mobile_thumbnail">
                                 <i class="icn_mobile mo_game_5"></i>
@@ -567,7 +570,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="mobile_item filter_casual on">
+                    <li class="mobile_item filter_all filter_casual on">
                         <a href="#" class="item_wrap">
                             <div class="mobile_thumbnail">
                                 <i class="icn_mobile mo_game_6"></i>
@@ -584,7 +587,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="mobile_item filter_fps on">
+                    <li class="mobile_item filter_all filter_fps on">
                         <a href="#" class="item_wrap">
                             <div class="mobile_thumbnail">
                                 <i class="icn_mobile mo_game_7"></i>

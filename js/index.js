@@ -32,6 +32,34 @@ $(function () {
     $('.js_btn_list').on('click',function () {
         $('.game_wrap').removeClass('type_thumbnail').addClass('type_list');
     });
+
+    /* game filter */
+    $('.js_btn_allgame').on('click', function () {
+        gameFilter(this);
+        $('.filter_all').addClass('on');
+    });
+    $('.js_btn_mmorpg').on('click', function() {
+        gameFilter(this);
+        $('.filter_mmorpg').addClass('on');
+    });
+    $('.js_btn_action').on('click', function() {
+        gameFilter(this);
+        $('.filter_action').addClass('on');
+    });
+    $('.js_btn_fps').on('click', function() {
+        gameFilter(this);
+        $('.filter_fps').addClass('on');
+    });
+    $('.js_btn_casual').on('click', function() {
+        gameFilter(this);
+        $('.filter_casual').addClass('on');
+    })
+
+    var gameFilter = function(t) {
+        $('.filter_item').removeClass('on');
+        $(t).parent().addClass('on');
+        $('.filter_all').removeClass('on');
+    }
 });
 
 $(document).ready(function(){
