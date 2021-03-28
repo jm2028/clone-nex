@@ -49,6 +49,13 @@ $(function () {
         $('.game_wrap').removeClass('type_thumbnail').addClass('type_list');
     });
 
+    /* link button*/
+    $('.js_btn_molink').on('click', function () {
+        $('html').animate({scrollTop : $('.js_btn_pclink').offset().top - 100}, 400);
+    });
+    $('.js_btn_pclink').on('click', function () {
+        $('html').animate({scrollTop : $('.js_btn_molink').offset().top - 100}, 400);
+    });
 
     /* game filter */
     $('.js_btn_allgame').on('click', function () {
@@ -78,7 +85,6 @@ $(function () {
         $('.filter_all').removeClass('on');
     }
 
-    
 });
 
 $(document).ready(function(){
@@ -91,4 +97,3 @@ $(document).ready(function(){
         autoplayHoverPause: true
     });
 });
-
