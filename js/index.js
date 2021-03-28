@@ -17,13 +17,29 @@ $(function () {
         $('.gnb_pcgame_wrap').removeClass('on');
         $('.gnb_mogame_wrap').addClass('on');
     });
-    /* dimmed 클릭시 menu 닫힘 */
+    /* nav dimmed 클릭시 menu 닫힘 */
     $('.gnb_dimmed').on('click', function () {
         $('header').removeClass('open');
     });
     $('.js_btn_gnb_close').on('click', function () {
         $('header').removeClass('open');
     });
+
+
+    /* custom slider dot */
+    var checkTarget = document.getElementById('last-slider');
+
+    var checkObserver = new MutationObserver(function() {
+        if ($('#last-slider').hasClass('active')) {
+            $('.owl-dot:first-child').addClass('anima');
+        }
+        else $('.owl-dot:first-child').removeClass('anima');
+    });
+    var config = {
+        attributes: true
+    };
+    checkObserver.observe(checkTarget, config);
+
 
     /* view type */
     $('.js_btn_thumbnail').on('click',function () {
@@ -32,6 +48,7 @@ $(function () {
     $('.js_btn_list').on('click',function () {
         $('.game_wrap').removeClass('type_thumbnail').addClass('type_list');
     });
+
 
     /* game filter */
     $('.js_btn_allgame').on('click', function () {
@@ -60,6 +77,8 @@ $(function () {
         $(t).parent().addClass('on');
         $('.filter_all').removeClass('on');
     }
+
+    
 });
 
 $(document).ready(function(){
@@ -68,7 +87,8 @@ $(document).ready(function(){
         loop: true,
         dotsContainer: '.owl-dots',
         autoplay: true,
-        autoplayTimeout: 6000,
+        autoplayTimeout: 5000,
         autoplayHoverPause: true
     });
 });
+
